@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout
+        android:id="@+id/RelativeLayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/imgUrl"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" />
+            <TextView
+                android:id="@+id/txtMovieTitleHeading"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Movie"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textStyle="bold"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/txtMovieTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="MovieTitle"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/txtYearHeading"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/txtMovieTitle"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Year"
+                android:textStyle="bold"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/txtYear"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/txtYearHeading"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Year"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/txtGenreHeading"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Genre"
+                android:textStyle="bold"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/txtGenre"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@id/txtYear"
+                android:layout_below="@id/txtMovieTitle"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Genre"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/txtIMDBRatingHeading"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="IMDBRating"
+                android:textStyle="bold"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/txtIMDBRating"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/txtYear"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="IMDBRating"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/txtIMDBVotesHeading"
+                android:text="IMDBVotes"
+                android:textSize="24sp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/txtIMDBVotes"
+                android:text="IMDBVotes"
+                android:layout_toRightOf="@id/txtIMDBRating"
+                android:layout_below="@id/txtYear"
+                android:textSize="24sp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/txtWriterHeading"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Writers"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/txtWriter"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Writers"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/txtDirectorHeading"
+                android:text="Directors"
+                android:textSize="24sp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/txtDirector"
+                android:text="Directors"
+                android:textSize="24sp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/txtActorsHeading"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Actors"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/txtActors"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Actors"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/txtCountryHeading"
+                android:text="Country"
+                android:textSize="24sp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/txtCountry"
+                android:text="Country"
+                android:textSize="24sp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/txtLanguageHeading"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textStyle="bold"
+                android:text="Language"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/txtLanguage"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Language"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

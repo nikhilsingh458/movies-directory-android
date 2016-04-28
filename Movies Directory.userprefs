@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="omdb\MoviesDirectory.csproj" RefactoringSettings.EnableRefactorings="True">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Xamarin_Android_API_21" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="omdb\Activities\MainActivity.cs">
+    <Files>
+      <File FileName="omdb\Activities\DetailActivity.cs" Line="1" Column="1" />
+      <File FileName="omdb\Activities\MainActivity.cs" Line="12" Column="2" />
+      <File FileName="omdb\Adapter\DataAdapter.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.MoviesDirectory AndroidDesignerPreferredDevice="Nexus 4" />
+</Properties>
