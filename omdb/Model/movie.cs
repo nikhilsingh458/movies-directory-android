@@ -1,5 +1,8 @@
 ﻿namespace MoviesDirectory.Model
 {
+	/// <summary>
+	/// Movie class
+	/// </summary>
     public class Movie
     {
         public string Title { get; set; }

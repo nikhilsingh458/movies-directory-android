@@ -5,6 +5,10 @@ using Android.Widget;
 using System.Net;
 using Movie = MoviesDirectory.Model.Movie;
 using omdb;
+using System;
+using System.Text;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MoviesDirectory.Activities
 {
@@ -36,6 +40,10 @@ namespace MoviesDirectory.Activities
 
         #region Overidden Methods
 
+		/// <summary>
+		/// Raises the create event.
+		/// </summary>
+		/// <param name="savedInstanceState">Saved instance state.</param>
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -60,6 +68,9 @@ namespace MoviesDirectory.Activities
 
         #region Methods
 
+		/// <summary>
+		/// Get the json response and bind it to the controls
+		/// </summary>
         public async void GetMovieData()
         {
             string strMovieTitle = Intent.GetStringExtra("MyData") ?? "Data Not Available";
@@ -72,18 +83,23 @@ namespace MoviesDirectory.Activities
 				imgPoster.SetImageBitmap (imageBitmap);
 			}
 
-            txtGenre.Text = MovieDetails.Genre;
+			txtGenre.Text = GetLines(MovieDetails.Genre).ToString();
             txtYear.Text = MovieDetails.Year;
             txtIMDBVotes.Text = MovieDetails.imdbVotes;
             txtIMDBRating.Text = MovieDetails.imdbRating;
             txtMovieTitle.Text = MovieDetails.Title;
-            txtActors.Text = MovieDetails.Actors;
-            txtWriters.Text = MovieDetails.Writer;
-            txtLanguage.Text = MovieDetails.Language;
-            txtDirector.Text = MovieDetails.Director;
-            txtCountry.Text = MovieDetails.Country;
+			txtActors.Text = GetLines(MovieDetails.Actors).ToString();
+			txtWriters.Text = GetLines(MovieDetails.Writer).ToString();
+			txtLanguage.Text = GetLines(MovieDetails.Language).ToString();
+			txtDirector.Text = GetLines(MovieDetails.Director).ToString();
+			txtCountry.Text = GetLines(MovieDetails.Country).ToString();
         }
 
+		/// <summary>
+		/// Gets the image bitmap from URL.
+		/// </summary>
+		/// <returns>The image bitmap from URL.</returns>
+		/// <param name="url">URL.Image url to display the data from json response</param>
 		public Bitmap GetImageBitmapFromUrl(string url)
         {
             Bitmap imageBitmap = null;
@@ -100,6 +116,19 @@ namespace MoviesDirectory.Activities
             return imageBitmap;
         }
 
+		public StringBuilder GetLines(string strjsonvalue)
+		{
+			StringBuilder appendstring = new StringBuilder ();
+			List<string> strwords = strjsonvalue.Split(',').Select(p => p.Trim()).ToList();
+
+				for (int wordscount = 0; wordscount < (strwords.Count - 1); wordscount++) 
+				{
+					appendstring.Append (strwords [wordscount]+ "\n");
+				}
+			appendstring.Append(strwords[strwords.Count - 1]);
+
+			return appendstring;
+		}
         #endregion Methods
     }
 }

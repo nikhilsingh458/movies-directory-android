@@ -8,6 +8,9 @@ using System.Net;
 
 namespace MoviesDirectory.Adapter
 {
+	/// <summary>
+	/// Data adapter.Listview data adapter for custom apperance
+	/// </summary>
     public class DataAdapter : BaseAdapter<MoviesDirectory.Model.Movie>
     {
         #region Members
@@ -19,6 +22,11 @@ namespace MoviesDirectory.Adapter
 
         #region Constructor
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="MoviesDirectory.Adapter.DataAdapter"/> class.
+		/// </summary>
+		/// <param name="context">Context.</param>
+		/// <param name="lstmovies">list of movies</param>
         public DataAdapter(Activity context, ObservableCollection<MoviesDirectory.Model.Movie> lstmovies)
         {
             _lstmovies = lstmovies;
@@ -29,11 +37,24 @@ namespace MoviesDirectory.Adapter
 
         #region implemented abstract members of BaseAdapter
 
+		/// <param name="position">The position of the item within the adapter's data set whose row id we want.</param>
+		/// <summary>
+		/// Get the row id associated with the specified position in the list.
+		/// </summary>
+		/// <returns>To be added.</returns>
         public override long GetItemId(int position)
         {
             return position;
         }
 
+		/// <param name="position">The position of the item within the adapter's data set of the item whose view
+		///  we want.</param>
+		/// <summary>
+		/// Gets the view.
+		/// </summary>
+		/// <returns>The view.</returns>
+		/// <param name="convertView">Convert view.</param>
+		/// <param name="parent">Parent.</param>
         public override Android.Views.View GetView(int position, Android.Views.View convertView, Android.Views.ViewGroup parent)
         {
             ItemsHolder holder = null;
@@ -72,6 +93,10 @@ namespace MoviesDirectory.Adapter
 
         #region Properties
 
+		/// <summary>
+		/// How many items are in the data set represented by this Adapter.
+		/// </summary>
+		/// <value>To be added.</value>
         public override int Count
         {
             get
@@ -84,6 +109,10 @@ namespace MoviesDirectory.Adapter
 
         #region Indexers
 
+		/// <summary>
+		/// Gets the <see cref="MoviesDirectory.Adapter.DataAdapter"/> at the specified index.
+		/// </summary>
+		/// <param name="index">Index.</param>
         public override MoviesDirectory.Model.Movie this[int index]
         {
             get
@@ -96,6 +125,9 @@ namespace MoviesDirectory.Adapter
 
         #region Class
 
+		/// <summary>
+		/// Items holder.
+		/// </summary>
         private class ItemsHolder : Java.Lang.Object
         {
             public TextView Title { get; set; }
@@ -107,17 +139,30 @@ namespace MoviesDirectory.Adapter
 
         #region Methods
 
+		/// <summary>
+		/// Add the specified movielst.
+		/// </summary>
+		/// <param name="movielst">Movielst.</param>
         public void Add(MoviesDirectory.Model.Movie movielst)
         {
             _lstmovies.Add(movielst);
             NotifyDataSetChanged();
         }
 
+		/// <summary>
+		/// Gets the list.
+		/// </summary>
+		/// <returns>The list.</returns>
         public ObservableCollection<MoviesDirectory.Model.Movie> GetList()
         {
             return _lstmovies;
         }
 
+		/// <summary>
+		/// Gets the image bitmap from URL.
+		/// </summary>
+		/// <returns>The image bitmap from URL.</returns>
+		/// <param name="url">URL.</param>
 		public Bitmap GetImageBitmapFromUrl(string url)
 		{
 			Bitmap imageBitmap = null;

@@ -12,6 +12,9 @@ using MoviesDirectory.Model;
 
 namespace MoviesDirectory
 {
+/// <summary>
+/// OMDB service.Service class to fetch the response
+/// </summary>
     public class OMDBService
     {
         private const string omdbUrl = "http://www.omdbapi.com/?"; // Base omdb api URL
@@ -20,11 +23,21 @@ namespace MoviesDirectory
         public Movie newMovieList; // Initialize movie list object
         private bool loop = false;
 
+		/// <summary>
+		/// Gets the instanse.
+		/// </summary>
+		/// <returns>The instanse.</returns>
         public static OMDBService getInstanse()
         {
             return new OMDBService();
         }
 
+		/// <summary>
+		/// Gets the movie details asynchronously
+		/// </summary>
+		/// <returns>Movie details</returns>
+		/// <param name="query">search query passed from user</param>
+		/// <param name="apiKey">API key(if available).</param>
         public async Task<Movie> GetMovie(string query, string apiKey = "")
         {
             using (var client = new HttpClient())
@@ -46,6 +59,12 @@ namespace MoviesDirectory
             }
         }
 
+		/// <summary>
+		/// Gets the movie list response asynchronously
+		/// </summary>
+		/// <returns>List of movies based on search parameters</returns>
+		/// <param name="query">search query entered by user</param>
+		/// <param name="apiKey">API key(if available).</param>
         public async Task<Movie> GetMovieList(string query, string apiKey = "")
         {
             using (var client = new HttpClient())
@@ -67,6 +86,13 @@ namespace MoviesDirectory
             }
         }
 
+		/// <summary>
+		/// Gets the episodes and series list based on type of movie and name asynchronously.
+		/// </summary>
+		/// <returns>The episodes and series list.</returns>
+		/// <param name="query">Search text entered by user</param>
+		/// <param name="episodeorseries">type - Episode or series.</param>
+		/// <param name="apiKey">API key(if available).</param>
         public async Task<Movie> GetEpisodesAndSeriesList(string query, string episodeorseries, string apiKey = "")
         {
             using (var client = new HttpClient())
@@ -88,6 +114,12 @@ namespace MoviesDirectory
             }
         }
 
+		/// <summary>
+		/// Get the specified requestType, data and timeOut.
+		/// </summary>
+		/// <param name="requestType">Request type.Weather Movie name or details</param>
+		/// <param name="data">key passed from the UI layer</param>
+		/// <param name="timeOut">Response Time out.</param>
 		public async Task<JsonValue> get(RequestType requestType, Dictionary<string, string> data, int timeOut)
         {
             var httpClient = new HttpClient()
@@ -136,7 +168,7 @@ namespace MoviesDirectory
             }
             catch (HttpRequestException e)
             {
-                //oops
+				Console.Write (e.Message);
                 return null;
             }
             finally
@@ -145,11 +177,22 @@ namespace MoviesDirectory
             }
         }
 
+		/// <summary>
+		/// Get the specified requestType and data.
+		/// </summary>
+		/// <param name="requestType">Request type.</param>
+		/// <param name="data">Data.</param>
 		public async Task<JsonValue> get(RequestType requestType, Dictionary<string, string> data)
         {
             return await get(requestType, data, 0);
         }
 
+		/// <summary>
+		/// Loops the request.
+		/// </summary>
+		/// <param name="requestType">Request type.</param>
+		/// <param name="data">Data.</param>
+		/// <param name="timeout">Timeout.</param>
 		public async void loopRequest(RequestType requestType, Dictionary<string, string> data, int timeout)
         {
             loop = true;
@@ -159,11 +202,19 @@ namespace MoviesDirectory
             }
         }
 
+		/// <summary>
+		/// Stops the loop.
+		/// </summary>
         public void stopLoop()
         {
             loop = false;
         }
 
+		/// <summary>
+		/// Builds the parameters and append.
+		/// </summary>
+		/// <returns>The parameters.</returns>
+		/// <param name="data">Data.</param>
         public string buildParams(Dictionary<string, string> data)
         {
             if (data != null && data.Count > 0)
