@@ -1,11 +1,8 @@
 ﻿<Properties StartupItem="omdb\MoviesDirectory.csproj" RefactoringSettings.EnableRefactorings="True">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.192.168.56.101:5555" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="omdb\obj\Debug\resourcecache\60614A5BDCDFB90FD0A117C1A18833A4\res\layout\abc_screen_toolbar.xml">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.sample" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="omdb\Activities\DetailActivity.cs">
     <Files>
-      <File FileName="omdb\Activities\DetailActivity.cs" Line="1" Column="1" />
-      <File FileName="omdb\Activities\MainActivity.cs" Line="16" Column="48" />
-      <File FileName="omdb\Resources\mipmap-xxxhdpi\abc_screen_toolbar.xml" Line="32" Column="41" />
-      <File FileName="omdb\obj\Debug\resourcecache\60614A5BDCDFB90FD0A117C1A18833A4\res\layout\abc_screen_toolbar.xml" Line="28" Column="1" />
+      <File FileName="omdb\Activities\DetailActivity.cs" Line="12" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

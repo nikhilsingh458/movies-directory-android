@@ -108,7 +108,10 @@
     <AndroidResource Include="Resources\drawable\search.png" />
     <AndroidResource Include="Resources\values\theme.xml" />
     <AndroidResource Include="Resources\drawable\Curvedlayouts.xml" />
-    <AndroidResource Include="Resources\drawable\Curvedblackbackground.xml" />
+    <AndroidResource Include="Resources\drawable\filter.png" />
+    <AndroidResource Include="Resources\drawable\ActionMenu.xml" />
+    <AndroidResource Include="Resources\drawable\sortascending.png" />
+    <AndroidResource Include="Resources\drawable\sortdescending.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

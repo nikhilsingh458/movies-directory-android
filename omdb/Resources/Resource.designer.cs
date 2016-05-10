@@ -1732,10 +1732,10 @@ namespace omdb
 			public const int abc_textfield_search_material = 2130837571;
 			
 			// aapt resource value: 0x7f020044
-			public const int Background = 2130837572;
+			public const int ActionMenu = 2130837572;
 			
 			// aapt resource value: 0x7f020045
-			public const int Curvedblackbackground = 2130837573;
+			public const int Background = 2130837573;
 			
 			// aapt resource value: 0x7f020046
 			public const int Curvedlayouts = 2130837574;
@@ -1746,14 +1746,23 @@ namespace omdb
 			// aapt resource value: 0x7f020048
 			public const int design_snackbar_background = 2130837576;
 			
-			// aapt resource value: 0x7f02004b
-			public const int notification_template_icon_bg = 2130837579;
-			
 			// aapt resource value: 0x7f020049
-			public const int RoundedCorners = 2130837577;
+			public const int filter = 2130837577;
+			
+			// aapt resource value: 0x7f02004e
+			public const int notification_template_icon_bg = 2130837582;
 			
 			// aapt resource value: 0x7f02004a
-			public const int search = 2130837578;
+			public const int RoundedCorners = 2130837578;
+			
+			// aapt resource value: 0x7f02004b
+			public const int search = 2130837579;
+			
+			// aapt resource value: 0x7f02004c
+			public const int sortascending = 2130837580;
+			
+			// aapt resource value: 0x7f02004d
+			public const int sortdescending = 2130837581;
 			
 			static Drawable()
 			{
@@ -1774,11 +1783,8 @@ namespace omdb
 			// aapt resource value: 0x7f070070
 			public const int ScrollView01 = 2131165296;
 			
-			// aapt resource value: 0x7f070087
-			public const int Text = 2131165319;
-			
-			// aapt resource value: 0x7f07008e
-			public const int action0 = 2131165326;
+			// aapt resource value: 0x7f07008d
+			public const int action0 = 2131165325;
 			
 			// aapt resource value: 0x7f07005a
 			public const int action_bar = 2131165274;
@@ -1804,8 +1810,8 @@ namespace omdb
 			// aapt resource value: 0x7f07005b
 			public const int action_context_bar = 2131165275;
 			
-			// aapt resource value: 0x7f070092
-			public const int action_divider = 2131165330;
+			// aapt resource value: 0x7f070091
+			public const int action_divider = 2131165329;
 			
 			// aapt resource value: 0x7f070003
 			public const int action_menu_divider = 2131165187;
@@ -1840,8 +1846,8 @@ namespace omdb
 			// aapt resource value: 0x7f070044
 			public const int buttonPanel = 2131165252;
 			
-			// aapt resource value: 0x7f07008f
-			public const int cancel_action = 2131165327;
+			// aapt resource value: 0x7f07008e
+			public const int cancel_action = 2131165326;
 			
 			// aapt resource value: 0x7f07002b
 			public const int center = 2131165227;
@@ -1855,8 +1861,8 @@ namespace omdb
 			// aapt resource value: 0x7f070052
 			public const int checkbox = 2131165266;
 			
-			// aapt resource value: 0x7f070095
-			public const int chronometer = 2131165333;
+			// aapt resource value: 0x7f070094
+			public const int chronometer = 2131165332;
 			
 			// aapt resource value: 0x7f070033
 			public const int clip_horizontal = 2131165235;
@@ -1903,8 +1909,8 @@ namespace omdb
 			// aapt resource value: 0x7f07001b
 			public const int end = 2131165211;
 			
-			// aapt resource value: 0x7f07009a
-			public const int end_padder = 2131165338;
+			// aapt resource value: 0x7f070099
+			public const int end_padder = 2131165337;
 			
 			// aapt resource value: 0x7f070023
 			public const int enterAlways = 2131165219;
@@ -1948,17 +1954,17 @@ namespace omdb
 			// aapt resource value: 0x7f07003f
 			public const int image = 2131165247;
 			
-			// aapt resource value: 0x7f07008a
-			public const int imagePoster = 2131165322;
+			// aapt resource value: 0x7f070087
+			public const int imagePoster = 2131165319;
 			
 			// aapt resource value: 0x7f070072
 			public const int imgUrl = 2131165298;
 			
-			// aapt resource value: 0x7f07008c
-			public const int imgbtnMovie = 2131165324;
+			// aapt resource value: 0x7f07008b
+			public const int imgbtnMovie = 2131165323;
 			
-			// aapt resource value: 0x7f070099
-			public const int info = 2131165337;
+			// aapt resource value: 0x7f070098
+			public const int info = 2131165336;
 			
 			// aapt resource value: 0x7f070000
 			public const int item_touch_helper_previous_elevation = 2131165184;
@@ -1966,11 +1972,11 @@ namespace omdb
 			// aapt resource value: 0x7f07002f
 			public const int left = 2131165231;
 			
-			// aapt resource value: 0x7f070093
-			public const int line1 = 2131165331;
+			// aapt resource value: 0x7f070092
+			public const int line1 = 2131165330;
 			
-			// aapt resource value: 0x7f070097
-			public const int line3 = 2131165335;
+			// aapt resource value: 0x7f070096
+			public const int line3 = 2131165334;
 			
 			// aapt resource value: 0x7f07000b
 			public const int listMode = 2131165195;
@@ -1978,11 +1984,11 @@ namespace omdb
 			// aapt resource value: 0x7f070041
 			public const int list_item = 2131165249;
 			
-			// aapt resource value: 0x7f07008d
-			public const int lstview = 2131165325;
+			// aapt resource value: 0x7f07008c
+			public const int lstview = 2131165324;
 			
-			// aapt resource value: 0x7f070091
-			public const int media_actions = 2131165329;
+			// aapt resource value: 0x7f070090
+			public const int media_actions = 2131165328;
 			
 			// aapt resource value: 0x7f07001c
 			public const int middle = 2131165212;
@@ -2098,6 +2104,12 @@ namespace omdb
 			// aapt resource value: 0x7f070027
 			public const int snap = 2131165223;
 			
+			// aapt resource value: 0x7f07009a
+			public const int sorting = 2131165338;
+			
+			// aapt resource value: 0x7f07009b
+			public const int sortingdesc = 2131165339;
+			
 			// aapt resource value: 0x7f070045
 			public const int spacer = 2131165253;
 			
@@ -2116,8 +2128,8 @@ namespace omdb
 			// aapt resource value: 0x7f070031
 			public const int start = 2131165233;
 			
-			// aapt resource value: 0x7f070090
-			public const int status_bar_latest_event_content = 2131165328;
+			// aapt resource value: 0x7f07008f
+			public const int status_bar_latest_event_content = 2131165327;
 			
 			// aapt resource value: 0x7f070065
 			public const int submit_area = 2131165285;
@@ -2125,17 +2137,17 @@ namespace omdb
 			// aapt resource value: 0x7f07000d
 			public const int tabMode = 2131165197;
 			
-			// aapt resource value: 0x7f070098
-			public const int text = 2131165336;
+			// aapt resource value: 0x7f070097
+			public const int text = 2131165335;
 			
-			// aapt resource value: 0x7f070096
-			public const int text2 = 2131165334;
+			// aapt resource value: 0x7f070095
+			public const int text2 = 2131165333;
 			
 			// aapt resource value: 0x7f07004d
 			public const int textSpacerNoButtons = 2131165261;
 			
-			// aapt resource value: 0x7f070094
-			public const int time = 2131165332;
+			// aapt resource value: 0x7f070093
+			public const int time = 2131165331;
 			
 			// aapt resource value: 0x7f070043
 			public const int title = 2131165251;
@@ -2197,8 +2209,8 @@ namespace omdb
 			// aapt resource value: 0x7f070073
 			public const int txtMovieTitleHeading = 2131165299;
 			
-			// aapt resource value: 0x7f07008b
-			public const int txtSearch = 2131165323;
+			// aapt resource value: 0x7f07008a
+			public const int txtSearch = 2131165322;
 			
 			// aapt resource value: 0x7f07007e
 			public const int txtWriter = 2131165310;

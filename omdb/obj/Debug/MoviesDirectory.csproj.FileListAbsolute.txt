@@ -16,7 +16,6 @@ C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\bin\Debug\System.Net.Http.For
 C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\bin\Debug\System.Net.Http.Extensions.xml
 C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\bin\Debug\System.Net.Http.Primitives.xml
 C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\bin\Debug\LRUCache.dll.mdb
-C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\MoviesDirectory.csprojResolveAssemblyReference.cache
 C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\omdb.dll
 C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\omdb.pdb
 C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\android\bin\com.companyname.omdb.apk
@@ -38,9 +37,12 @@ C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\res\mipmap-xxhdpi\s
 C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\res\mipmap-xxxhdpi\search.png
 C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\res\drawable\search.png
 C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\res\values\theme.xml
+C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\res\drawable\curvedlayouts.xml
+C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\res\drawable\filter.png
+C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\res\drawable\actionmenu.xml
+C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\res\drawable\sortascending.png
+C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\res\drawable\sortdescending.png
 C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\R.cs.flag
 C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\uploadflags.txt
-C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\res\drawable\curvedlayouts.xml
-C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\res\drawable\curvedblackbackground.xml
 C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\omdb.dll.mdb
 C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\bin\Debug\omdb.dll.mdb

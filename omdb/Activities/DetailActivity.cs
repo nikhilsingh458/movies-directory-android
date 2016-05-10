@@ -9,9 +9,13 @@ using System;
 using System.Text;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace MoviesDirectory.Activities
 {
+	/// <summary>
+	/// Detail activity for showing the details about selected movie. 
+	/// </summary>
     [Activity(Label = "Movie Detail")]
     public class DetailActivity : Activity
     {
@@ -106,8 +110,9 @@ namespace MoviesDirectory.Activities
 
             using (var webClient = new WebClient())
             {
-                var imageBytes = webClient.DownloadData(url);
-                if (imageBytes != null && imageBytes.Length > 0)
+				var imageBytes = webClient.DownloadData(url);
+
+				if (imageBytes != null && imageBytes.Length > 0)
                 {
                     imageBitmap = BitmapFactory.DecodeByteArray(imageBytes, 0, imageBytes.Length);
                 }
