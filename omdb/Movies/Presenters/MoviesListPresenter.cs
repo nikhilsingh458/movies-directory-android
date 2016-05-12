@@ -1,34 +1,60 @@
-﻿using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using MoviesDirectory.Model;
 using System.Collections.Generic;
 using System.Json;
+using MoviesDirectory.Enums;
 using MoviesDirectory.Movies.Interfaces;
+using MoviesDirectory.Service;
 
-namespace MoviesDirectory
+namespace MoviesDirectory.Movies.Presenter
 {
+	/// <summary>
+	/// Movies list presenter.
+	/// </summary>
 	public class MoviesListPresenter
 	{
 
-		protected ObservableCollection<Movie> Lstmovies = new ObservableCollection<Movie>();
-		IMoviesListView moviesListView;
+		#region Members
 
+		protected ObservableCollection<Movie> Lstmovies = new ObservableCollection<Movie>();
+	    readonly IMoviesListView _moviesListView;
+
+		#endregion
+
+		#region Constructor
+        /// <summary>
+        /// Parameterized Constructor
+        /// </summary>
+        /// <param name="view"></param>
 		public MoviesListPresenter (IMoviesListView view)
 		{
-			moviesListView = view;
+			_moviesListView = view;
 		}
 
+		#endregion
+
+		#region Methods
+
+        /// <summary>
+        /// Get Movie Details based on clicked item position
+        /// </summary>
+        /// <param name="position"></param>
 		public void GetMovieDetails(int position)
 		{
 			Movie selectedMovie = Lstmovies [position];
-			moviesListView.GetMovieName (selectedMovie.Title,selectedMovie.IMDBID);
+			_moviesListView.GetMovieName (selectedMovie.Title,selectedMovie.IMDBID);
 		}
-		public async void GetMovieData(string Searchtext)
+
+        /// <summary>
+        /// Get Moviesdata Based on search criteria.
+        /// </summary>
+        /// <param name="searchtext"></param>
+		public async void GetMovieData(string searchtext)
 		{
-			if (Searchtext.Length >= 3)
+			if (searchtext.Length >= 3)
 			{
-				var jsondictionary = new Dictionary<string, string> { { "s", Searchtext } };
-				JsonValue jsonresultset = await OMDBService.getInstanse ().get (RequestType.FIND_MOVIE, jsondictionary);
+				var jsondictionary = new Dictionary<string, string> { { "s", searchtext } };
+				JsonValue jsonresultset = await OMDBService.GetInstanse().Get(RequestType.FIND_MOVIE, jsondictionary);
 				if (jsonresultset.ContainsKey ("Search")) 
 				{
 					Lstmovies.Clear ();
@@ -49,14 +75,16 @@ namespace MoviesDirectory
 					}
 
 				}
-				moviesListView.MoviesList = Lstmovies;
+				_moviesListView.MoviesList = Lstmovies;
 			} 
 			else 
 			{
-				moviesListView.AlertMessage ();
+				_moviesListView.AlertMessage ();
 			}
 				
 		}
+		#endregion
+
 	}
 }
 

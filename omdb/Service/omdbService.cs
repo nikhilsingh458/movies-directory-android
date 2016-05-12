@@ -2,32 +2,34 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Json;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
+using MoviesDirectory.Enums;
 using MoviesDirectory.Model;
 
 
-namespace MoviesDirectory
+namespace MoviesDirectory.Service
 {
 /// <summary>
 /// OMDB service.Service class to fetch the response
 /// </summary>
     public class OMDBService
     {
-        private const string omdbUrl = "http://www.omdbapi.com/?"; // Base omdb api URL
-        public string omdbKey; // A key is required for poster images.
-        public Movie newMovie; // Initialize movie object
-        public Movie newMovieList; // Initialize movie list object
-        private bool loop = false;
+        private const string OmdbUrl = "http://www.omdbapi.com/?"; // Base omdb api URL
+        public string OmdbKey; // A key is required for poster images.
+        public Movie Movie; // Initialize movie object
+        public Movie MovieList; // Initialize movie list object
+        private bool _loop;
 
 		/// <summary>
 		/// Gets the instanse.
 		/// </summary>
 		/// <returns>The instanse.</returns>
-        public static OMDBService getInstanse()
+        public static OMDBService GetInstanse()
         {
             return new OMDBService();
         }
@@ -42,15 +44,15 @@ namespace MoviesDirectory
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri(omdbUrl);
+                client.BaseAddress = new Uri(OmdbUrl);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                HttpResponseMessage response = await client.GetAsync(omdbUrl + "t=" + query);
+                HttpResponseMessage response = await client.GetAsync(OmdbUrl + "t=" + query);
                 if (response.IsSuccessStatusCode)
                 {
-                    newMovie = await response.Content.ReadAsAsync<Movie>();
-                    return newMovie;
+                    Movie = await response.Content.ReadAsAsync<Movie>();
+                    return Movie;
                 }
                 else
                 {
@@ -69,15 +71,15 @@ namespace MoviesDirectory
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri(omdbUrl);
+                client.BaseAddress = new Uri(OmdbUrl);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                HttpResponseMessage response = await client.GetAsync(omdbUrl + "s=" + query);
+                HttpResponseMessage response = await client.GetAsync(OmdbUrl + "s=" + query);
                 if (response.IsSuccessStatusCode)
                 {
-                    newMovieList = await response.Content.ReadAsAsync<Movie>();
-                    return newMovieList;
+                    MovieList = await response.Content.ReadAsAsync<Movie>();
+                    return MovieList;
                 }
                 else
                 {
@@ -97,15 +99,15 @@ namespace MoviesDirectory
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri(omdbUrl);
+                client.BaseAddress = new Uri(OmdbUrl);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                HttpResponseMessage response = await client.GetAsync(omdbUrl + "s=" + query + "&type=" + episodeorseries);
+                HttpResponseMessage response = await client.GetAsync(OmdbUrl + "s=" + query + "&type=" + episodeorseries);
                 if (response.IsSuccessStatusCode)
                 {
-                    newMovieList = await response.Content.ReadAsAsync<Movie>();
-                    return newMovieList;
+                    MovieList = await response.Content.ReadAsAsync<Movie>();
+                    return MovieList;
                 }
                 else
                 {
@@ -120,9 +122,9 @@ namespace MoviesDirectory
 		/// <param name="requestType">Request type.Weather Movie name or details</param>
 		/// <param name="data">key passed from the UI layer</param>
 		/// <param name="timeOut">Response Time out.</param>
-		public async Task<JsonValue> get(RequestType requestType, Dictionary<string, string> data, int timeOut)
+		public async Task<JsonValue> Get(RequestType requestType, Dictionary<string, string> data, int timeOut)
         {
-            var httpClient = new HttpClient()
+            new HttpClient()
             {
                 Timeout = TimeSpan.FromMilliseconds(3000)
             };
@@ -182,9 +184,9 @@ namespace MoviesDirectory
 		/// </summary>
 		/// <param name="requestType">Request type.</param>
 		/// <param name="data">Data.</param>
-		public async Task<JsonValue> get(RequestType requestType, Dictionary<string, string> data)
+		public async Task<JsonValue> Get(RequestType requestType, Dictionary<string, string> data)
         {
-            return await get(requestType, data, 0);
+            return await Get(requestType, data, 0);
         }
 
 		/// <summary>
@@ -195,10 +197,10 @@ namespace MoviesDirectory
 		/// <param name="timeout">Timeout.</param>
 		public async void loopRequest(RequestType requestType, Dictionary<string, string> data, int timeout)
         {
-            loop = true;
-            while (loop)
+            _loop = true;
+            while (_loop)
             {
-                await get(requestType, data, timeout);
+                await Get(requestType, data, timeout);
             }
         }
 
@@ -207,7 +209,7 @@ namespace MoviesDirectory
 		/// </summary>
         public void stopLoop()
         {
-            loop = false;
+            _loop = false;
         }
 
 		/// <summary>
@@ -216,22 +218,14 @@ namespace MoviesDirectory
 		/// <returns>The parameters.</returns>
 		/// <param name="data">Data.</param>
         public string buildParams(Dictionary<string, string> data)
-        {
-            if (data != null && data.Count > 0)
+		{
+		    if (data != null && data.Count > 0)
             {
-                String s = "?";
-                foreach (string item in data.Keys)
-                {
-                    s += item
-                        + "=" + data[item] + "&";
-                }
-                s.Substring(0, s.Length - 2);
-                return s;
+                String parameters = data.Keys.Aggregate("?", (current, item) => current + (item + "=" + data[item] + "&"));
+                parameters.Substring(0, parameters.Length - 2);
+                return parameters;
             }
-            else
-            {
-                return "";
-            }
-        }
+		    return "";
+		}
     }
 }

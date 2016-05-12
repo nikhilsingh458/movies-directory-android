@@ -2,10 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/sorting"
           android:icon="@drawable/ic_sortascending"
-          android:title="Aesc"
+          android:title="Ascending"
           android:showAsAction="always"/>
     <item android:id="@+id/sortingdesc"
           android:icon="@drawable/ic_sortdescending"
-          android:title="Desc"
+          android:title="Descending"
           android:showAsAction="always"/>
 </menu>

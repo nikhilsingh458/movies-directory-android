@@ -2,16 +2,14 @@
 using Android.Content;
 using Android.OS;
 using Android.Widget;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Json;
 using MoviesDirectory.Model;
 using MoviesDirectory.Adapter;
 using omdb;
 using Android.Views;
 using System.Linq;
-using Java.IO;
 using MoviesDirectory.Movies.Interfaces;
+using MoviesDirectory.Movies.Presenter;
 
 
 namespace MoviesDirectory.Movies.Views
@@ -24,8 +22,8 @@ namespace MoviesDirectory.Movies.Views
     {
         #region Members
 
-        protected ObservableCollection<Movie> Lstmovies = new ObservableCollection<Movie>();
-		private MoviesListPresenter Presenter;
+        protected ObservableCollection<Movie> movies = new ObservableCollection<Movie>();
+		private MoviesListPresenter _presenter;
 
         #endregion Members
 
@@ -48,13 +46,13 @@ namespace MoviesDirectory.Movies.Views
 		{
 			get 
 			{
-				return Lstmovies;
+				return movies;
 			}
 
 			set 
 			{
-				Lstmovies = value;
-				MoviesDataAdapter = new DataAdapter (this, Lstmovies);
+				movies = value;
+				MoviesDataAdapter = new DataAdapter (this, movies);
 				Lvmovies.Adapter = MoviesDataAdapter;
 			}
 		}
@@ -96,19 +94,16 @@ namespace MoviesDirectory.Movies.Views
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
-			Presenter = new MoviesListPresenter (this);
+			_presenter = new MoviesListPresenter (this);
 			Lvmovies = FindViewById<ListView>(Resource.Id.listview_movies);
 			txtSearch = FindViewById<TextView> (Resource.Id.txt_search);
 			imgbtnMovie=FindViewById<ImageButton>(Resource.Id.image_btnmovie);
 
-			imgbtnMovie.Click += ((sender, e) => {
-				Presenter.GetMovieData(txtSearch.Text);
-			});
+            //Presenter calls
 
-			Lvmovies.ItemClick += (sender, e) =>
-			{
-				Presenter.GetMovieDetails(e.Position);
-			};
+			imgbtnMovie.Click += ((sender, e) => _presenter.GetMovieData(txtSearch.Text));
+
+			Lvmovies.ItemClick += (sender, e) =>_presenter.GetMovieDetails(e.Position);
         }
 
 		/// <param name="menu">The options menu as last shown or first initialized by
@@ -120,7 +115,7 @@ namespace MoviesDirectory.Movies.Views
 		public override bool OnPrepareOptionsMenu(IMenu menu)
 		{
 			menu.Clear ();
-			MenuInflater.Inflate(Resource.Drawable.ActionMenu, menu);
+			MenuInflater.Inflate(Resource.Drawable.actionmenu, menu);
 			return base.OnPrepareOptionsMenu(menu);
 		}
 
@@ -134,15 +129,15 @@ namespace MoviesDirectory.Movies.Views
 			switch (item.ItemId)
 			{
 			case Resource.Id.sorting:
-				Lstmovies = new ObservableCollection<Movie> (Lstmovies.OrderBy (moviename => moviename.Title).ToList ());
-				MoviesDataAdapter = new DataAdapter (this, Lstmovies);
+				movies = new ObservableCollection<Movie> (movies.OrderBy (moviename => moviename.Title).ToList ());
+				MoviesDataAdapter = new DataAdapter (this, movies);
 				MoviesDataAdapter.NotifyDataSetChanged ();
 				Lvmovies.Adapter = MoviesDataAdapter;
 				item.SetVisible (false);
 				return true;
 			case Resource.Id.sortingdesc:
-				Lstmovies = new ObservableCollection<Movie> (Lstmovies.OrderByDescending (moviename => moviename.Title).ToList ());
-				MoviesDataAdapter = new DataAdapter (this, Lstmovies);
+				movies = new ObservableCollection<Movie> (movies.OrderByDescending (moviename => moviename.Title).ToList ());
+				MoviesDataAdapter = new DataAdapter (this, movies);
 				MoviesDataAdapter.NotifyDataSetChanged ();
 				Lvmovies.Adapter = MoviesDataAdapter;
 				item.SetVisible (false);

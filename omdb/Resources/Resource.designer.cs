@@ -1732,13 +1732,13 @@ namespace omdb
 			public const int abc_textfield_search_material = 2130837571;
 			
 			// aapt resource value: 0x7f020044
-			public const int ActionMenu = 2130837572;
+			public const int actionmenu = 2130837572;
 			
 			// aapt resource value: 0x7f020045
-			public const int Background = 2130837573;
+			public const int background = 2130837573;
 			
 			// aapt resource value: 0x7f020046
-			public const int Curvedlayouts = 2130837574;
+			public const int curvedlayouts = 2130837574;
 			
 			// aapt resource value: 0x7f020047
 			public const int design_fab_background = 2130837575;
@@ -1759,7 +1759,7 @@ namespace omdb
 			public const int notification_template_icon_bg = 2130837581;
 			
 			// aapt resource value: 0x7f02004c
-			public const int RoundedCorners = 2130837580;
+			public const int roundedcorners = 2130837580;
 			
 			static Drawable()
 			{

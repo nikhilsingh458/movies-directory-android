@@ -5,17 +5,16 @@ using Android.Widget;
 using System.Net;
 using Movie = MoviesDirectory.Model.Movie;
 using omdb;
-using System;
 using System.Text;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using MoviesDirectory.Service;
 
 namespace MoviesDirectory.Movies.Views
 {
-	/// <summary>
-	/// Detail activity for showing the details about selected movie. 
-	/// </summary>
+    /// <summary>
+    /// Detail activity for showing the details about selected movie. 
+    /// </summary>
     [Activity(Label = "Movie Detail")]
     public class DetailActivity : Activity
     {
@@ -44,10 +43,10 @@ namespace MoviesDirectory.Movies.Views
 
         #region Overidden Methods
 
-		/// <summary>
-		/// Raises the create event.
-		/// </summary>
-		/// <param name="savedInstanceState">Saved instance state.</param>
+        /// <summary>
+        /// Raises the create event.
+        /// </summary>
+        /// <param name="savedInstanceState">Saved instance state.</param>
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -72,47 +71,48 @@ namespace MoviesDirectory.Movies.Views
 
         #region Methods
 
-		/// <summary>
-		/// Get the json response and bind it to the controls
-		/// </summary>
+        /// <summary>
+        /// Get the json response and bind it to the controls
+        /// </summary>
         public async void GetMovieData()
         {
-			string strMovieTitle = Intent.GetStringExtra("MovieName") ?? "Data Not Available";
+            string strMovieTitle = Intent.GetStringExtra("MovieName") ?? "Data Not Available";
             OMDBService service = new OMDBService();
             var moviedetail = await service.GetMovie(strMovieTitle, "");
             MovieDetails = moviedetail;
 
-			if (MovieDetails.Poster.ToUpper () != "N/A") {
-				var imageBitmap = GetImageBitmapFromUrl (MovieDetails.Poster);
-				imgPoster.SetImageBitmap (imageBitmap);
-			}
+            if (MovieDetails.Poster.ToUpper() != "N/A")
+            {
+                var imageBitmap = GetImageBitmapFromUrl(MovieDetails.Poster);
+                imgPoster.SetImageBitmap(imageBitmap);
+            }
 
-			txtGenre.Text = GetLines(MovieDetails.Genre).ToString();
+            txtGenre.Text = GetLines(MovieDetails.Genre).ToString();
             txtYear.Text = MovieDetails.Year;
             txtIMDBVotes.Text = MovieDetails.IMDBVotes;
             txtIMDBRating.Text = MovieDetails.IMDBRating;
             txtMovieTitle.Text = MovieDetails.Title;
-			txtActors.Text = GetLines(MovieDetails.Actors).ToString();
-			txtWriters.Text = GetLines(MovieDetails.Writer).ToString();
-			txtLanguage.Text = GetLines(MovieDetails.Language).ToString();
-			txtDirector.Text = GetLines(MovieDetails.Director).ToString();
-			txtCountry.Text = GetLines(MovieDetails.Country).ToString();
+            txtActors.Text = GetLines(MovieDetails.Actors).ToString();
+            txtWriters.Text = GetLines(MovieDetails.Writer).ToString();
+            txtLanguage.Text = GetLines(MovieDetails.Language).ToString();
+            txtDirector.Text = GetLines(MovieDetails.Director).ToString();
+            txtCountry.Text = GetLines(MovieDetails.Country).ToString();
         }
 
-		/// <summary>
-		/// Gets the image bitmap from URL.
-		/// </summary>
-		/// <returns>The image bitmap from URL.</returns>
-		/// <param name="url">URL.Image url to display the data from json response</param>
-		public Bitmap GetImageBitmapFromUrl(string url)
+        /// <summary>
+        /// Gets the image bitmap from URL.
+        /// </summary>
+        /// <returns>The image bitmap from URL.</returns>
+        /// <param name="url">URL.Image url to display the data from json response</param>
+        public Bitmap GetImageBitmapFromUrl(string url)
         {
             Bitmap imageBitmap = null;
 
             using (var webClient = new WebClient())
             {
-				var imageBytes = webClient.DownloadData(url);
+                var imageBytes = webClient.DownloadData(url);
 
-				if (imageBytes != null && imageBytes.Length > 0)
+                if (imageBytes != null && imageBytes.Length > 0)
                 {
                     imageBitmap = BitmapFactory.DecodeByteArray(imageBytes, 0, imageBytes.Length);
                 }
@@ -121,24 +121,24 @@ namespace MoviesDirectory.Movies.Views
             return imageBitmap;
         }
 
-		/// <summary>
-		/// Split the text after comma(,) and display that in different line 
-		/// </summary>
-		/// <returns>string with new lines</returns>
-		/// <param name="strvalue">string value with comma's</param>
-		public StringBuilder GetLines(string strvalue)
-		{
-			StringBuilder appendstring = new StringBuilder ();
-			List<string> strwords = strvalue.Split(',').Select(p => p.Trim()).ToList();
+        /// <summary>
+        /// Split the text after comma(,) and display that in different line 
+        /// </summary>
+        /// <returns>string with new lines</returns>
+        /// <param name="strvalue">string value with comma's</param>
+        public StringBuilder GetLines(string strvalue)
+        {
+            StringBuilder appendstring = new StringBuilder();
+            List<string> strwords = strvalue.Split(',').Select(p => p.Trim()).ToList();
 
-				for (int wordscount = 0; wordscount < (strwords.Count - 1); wordscount++) 
-				{
-					appendstring.Append (strwords [wordscount]+ "\n");
-				}
-			appendstring.Append(strwords[strwords.Count - 1]);
+            for (int wordscount = 0; wordscount < (strwords.Count - 1); wordscount++)
+            {
+                appendstring.Append(strwords[wordscount] + "\n");
+            }
+            appendstring.Append(strwords[strwords.Count - 1]);
 
-			return appendstring;
-		}
+            return appendstring;
+        }
 
         #endregion Methods
     }

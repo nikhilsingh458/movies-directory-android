@@ -1,11 +1,3 @@
-MoviesDirectory.Movies.Views.DetailActivity, omdb;md52cb4cfcd47b28a190f7c2705e2e740df.DetailActivity
-MoviesDirectory.Movies.Views.DetailActivity, omdb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md52cb4cfcd47b28a190f7c2705e2e740df.DetailActivity
-MoviesDirectory.Movies.Views.DetailActivity;md52cb4cfcd47b28a190f7c2705e2e740df.DetailActivity
-moviesdirectory.movies.views.DetailActivity;md52cb4cfcd47b28a190f7c2705e2e740df.DetailActivity
-MoviesDirectory.Movies.Views.MainActivity, omdb;md52cb4cfcd47b28a190f7c2705e2e740df.MainActivity
-MoviesDirectory.Movies.Views.MainActivity, omdb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md52cb4cfcd47b28a190f7c2705e2e740df.MainActivity
-MoviesDirectory.Movies.Views.MainActivity;md52cb4cfcd47b28a190f7c2705e2e740df.MainActivity
-moviesdirectory.movies.views.MainActivity;md52cb4cfcd47b28a190f7c2705e2e740df.MainActivity
 MoviesDirectory.Adapter.DataAdapter, omdb;md5e683b0d2f5857cc14283d4339d6ba851.DataAdapter
 MoviesDirectory.Adapter.DataAdapter, omdb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5e683b0d2f5857cc14283d4339d6ba851.DataAdapter
 MoviesDirectory.Adapter.DataAdapter;md5e683b0d2f5857cc14283d4339d6ba851.DataAdapter
@@ -14,6 +6,14 @@ MoviesDirectory.Adapter.DataAdapter/ItemsHolder, omdb;md5e683b0d2f5857cc14283d43
 MoviesDirectory.Adapter.DataAdapter+ItemsHolder, omdb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5e683b0d2f5857cc14283d4339d6ba851.DataAdapter_ItemsHolder
 MoviesDirectory.Adapter.DataAdapter.ItemsHolder;md5e683b0d2f5857cc14283d4339d6ba851.DataAdapter_ItemsHolder
 moviesdirectory.adapter.DataAdapter_ItemsHolder;md5e683b0d2f5857cc14283d4339d6ba851.DataAdapter_ItemsHolder
+MoviesDirectory.Movies.Views.DetailActivity, omdb;md52cb4cfcd47b28a190f7c2705e2e740df.DetailActivity
+MoviesDirectory.Movies.Views.DetailActivity, omdb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md52cb4cfcd47b28a190f7c2705e2e740df.DetailActivity
+MoviesDirectory.Movies.Views.DetailActivity;md52cb4cfcd47b28a190f7c2705e2e740df.DetailActivity
+moviesdirectory.movies.views.DetailActivity;md52cb4cfcd47b28a190f7c2705e2e740df.DetailActivity
+MoviesDirectory.Movies.Views.MainActivity, omdb;md52cb4cfcd47b28a190f7c2705e2e740df.MainActivity
+MoviesDirectory.Movies.Views.MainActivity, omdb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md52cb4cfcd47b28a190f7c2705e2e740df.MainActivity
+MoviesDirectory.Movies.Views.MainActivity;md52cb4cfcd47b28a190f7c2705e2e740df.MainActivity
+moviesdirectory.movies.views.MainActivity;md52cb4cfcd47b28a190f7c2705e2e740df.MainActivity
 Android.Support.Design.Widget.Snackbar/SnackbarActionClickImplementor, Xamarin.Android.Support.Design;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
 Android.Support.Design.Widget.Snackbar+SnackbarActionClickImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
 Android.Support.Design.Widget.Snackbar.SnackbarActionClickImplementor;android.support.design.widget.Snackbar_SnackbarActionClickImplementor

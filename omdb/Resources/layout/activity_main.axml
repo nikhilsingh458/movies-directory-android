@@ -43,7 +43,7 @@
         android:layout_height="match_parent"
         android:dividerHeight="1px"
         android:id="@+id/listview_movies"
-        android:listSelector="#B0E0E6"
+        android:listSelector="#4682B4"
         android:layoutMode="opticalBounds"
         android:textAlignment="center"
         android:smoothScrollbar="true"
