@@ -61,7 +61,7 @@ namespace MoviesDirectory.Adapter
             var view = convertView;
             if (view == null)
             {
-                view = _context.LayoutInflater.Inflate(Resource.Layout.ListViewDetails, null);
+                view = _context.LayoutInflater.Inflate(Resource.Layout.list_view_details, null);
                 holder = new ItemsHolder
                 {
                     Year = view.FindViewById<TextView>(Resource.Id.txtyear),

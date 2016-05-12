@@ -1747,22 +1747,19 @@ namespace omdb
 			public const int design_snackbar_background = 2130837576;
 			
 			// aapt resource value: 0x7f020049
-			public const int filter = 2130837577;
-			
-			// aapt resource value: 0x7f02004e
-			public const int notification_template_icon_bg = 2130837582;
+			public const int ic_search = 2130837577;
 			
 			// aapt resource value: 0x7f02004a
-			public const int RoundedCorners = 2130837578;
+			public const int ic_sortascending = 2130837578;
 			
 			// aapt resource value: 0x7f02004b
-			public const int search = 2130837579;
-			
-			// aapt resource value: 0x7f02004c
-			public const int sortascending = 2130837580;
+			public const int ic_sortdescending = 2130837579;
 			
 			// aapt resource value: 0x7f02004d
-			public const int sortdescending = 2130837581;
+			public const int notification_template_icon_bg = 2130837581;
+			
+			// aapt resource value: 0x7f02004c
+			public const int RoundedCorners = 2130837580;
 			
 			static Drawable()
 			{
@@ -1777,11 +1774,11 @@ namespace omdb
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f070071
-			public const int RelativeLayout01 = 2131165297;
+			// aapt resource value: 0x7f07006a
+			public const int RelativeLayout01 = 2131165290;
 			
-			// aapt resource value: 0x7f070070
-			public const int ScrollView01 = 2131165296;
+			// aapt resource value: 0x7f070069
+			public const int ScrollView01 = 2131165289;
 			
 			// aapt resource value: 0x7f07008d
 			public const int action0 = 2131165325;
@@ -1888,17 +1885,17 @@ namespace omdb
 			// aapt resource value: 0x7f070040
 			public const int default_activity_button = 2131165248;
 			
-			// aapt resource value: 0x7f07006f
-			public const int design_menu_item_action_area = 2131165295;
+			// aapt resource value: 0x7f070089
+			public const int design_menu_item_action_area = 2131165321;
 			
-			// aapt resource value: 0x7f07006e
-			public const int design_menu_item_action_area_stub = 2131165294;
+			// aapt resource value: 0x7f070088
+			public const int design_menu_item_action_area_stub = 2131165320;
 			
-			// aapt resource value: 0x7f07006d
-			public const int design_menu_item_text = 2131165293;
+			// aapt resource value: 0x7f070087
+			public const int design_menu_item_text = 2131165319;
 			
-			// aapt resource value: 0x7f07006c
-			public const int design_navigation_view = 2131165292;
+			// aapt resource value: 0x7f070086
+			public const int design_navigation_view = 2131165318;
 			
 			// aapt resource value: 0x7f07000e
 			public const int disableHome = 2131165198;
@@ -1954,14 +1951,14 @@ namespace omdb
 			// aapt resource value: 0x7f07003f
 			public const int image = 2131165247;
 			
-			// aapt resource value: 0x7f070087
-			public const int imagePoster = 2131165319;
+			// aapt resource value: 0x7f07008a
+			public const int imagePoster = 2131165322;
 			
-			// aapt resource value: 0x7f070072
-			public const int imgUrl = 2131165298;
+			// aapt resource value: 0x7f070081
+			public const int image_btnmovie = 2131165313;
 			
-			// aapt resource value: 0x7f07008b
-			public const int imgbtnMovie = 2131165323;
+			// aapt resource value: 0x7f07006b
+			public const int imgUrl = 2131165291;
 			
 			// aapt resource value: 0x7f070098
 			public const int info = 2131165336;
@@ -1984,8 +1981,8 @@ namespace omdb
 			// aapt resource value: 0x7f070041
 			public const int list_item = 2131165249;
 			
-			// aapt resource value: 0x7f07008c
-			public const int lstview = 2131165324;
+			// aapt resource value: 0x7f070082
+			public const int listview_movies = 2131165314;
 			
 			// aapt resource value: 0x7f070090
 			public const int media_actions = 2131165328;
@@ -1999,8 +1996,8 @@ namespace omdb
 			// aapt resource value: 0x7f070015
 			public const int multiply = 2131165205;
 			
-			// aapt resource value: 0x7f07006b
-			public const int navigation_header_container = 2131165291;
+			// aapt resource value: 0x7f070085
+			public const int navigation_header_container = 2131165317;
 			
 			// aapt resource value: 0x7f070020
 			public const int never = 2131165216;
@@ -2095,11 +2092,11 @@ namespace omdb
 			// aapt resource value: 0x7f070013
 			public const int showTitle = 2131165203;
 			
-			// aapt resource value: 0x7f07006a
-			public const int snackbar_action = 2131165290;
+			// aapt resource value: 0x7f070084
+			public const int snackbar_action = 2131165316;
 			
-			// aapt resource value: 0x7f070069
-			public const int snackbar_text = 2131165289;
+			// aapt resource value: 0x7f070083
+			public const int snackbar_text = 2131165315;
 			
 			// aapt resource value: 0x7f070027
 			public const int snap = 2131165223;
@@ -2161,74 +2158,74 @@ namespace omdb
 			// aapt resource value: 0x7f070047
 			public const int topPanel = 2131165255;
 			
-			// aapt resource value: 0x7f070082
-			public const int txtActors = 2131165314;
-			
-			// aapt resource value: 0x7f070081
-			public const int txtActorsHeading = 2131165313;
-			
-			// aapt resource value: 0x7f070084
-			public const int txtCountry = 2131165316;
-			
-			// aapt resource value: 0x7f070083
-			public const int txtCountryHeading = 2131165315;
-			
-			// aapt resource value: 0x7f070080
-			public const int txtDirector = 2131165312;
-			
-			// aapt resource value: 0x7f07007f
-			public const int txtDirectorHeading = 2131165311;
-			
-			// aapt resource value: 0x7f070078
-			public const int txtGenre = 2131165304;
-			
-			// aapt resource value: 0x7f070077
-			public const int txtGenreHeading = 2131165303;
+			// aapt resource value: 0x7f07007b
+			public const int txtActors = 2131165307;
 			
 			// aapt resource value: 0x7f07007a
-			public const int txtIMDBRating = 2131165306;
-			
-			// aapt resource value: 0x7f070079
-			public const int txtIMDBRatingHeading = 2131165305;
-			
-			// aapt resource value: 0x7f07007c
-			public const int txtIMDBVotes = 2131165308;
-			
-			// aapt resource value: 0x7f07007b
-			public const int txtIMDBVotesHeading = 2131165307;
-			
-			// aapt resource value: 0x7f070086
-			public const int txtLanguage = 2131165318;
-			
-			// aapt resource value: 0x7f070085
-			public const int txtLanguageHeading = 2131165317;
-			
-			// aapt resource value: 0x7f070074
-			public const int txtMovieTitle = 2131165300;
-			
-			// aapt resource value: 0x7f070073
-			public const int txtMovieTitleHeading = 2131165299;
-			
-			// aapt resource value: 0x7f07008a
-			public const int txtSearch = 2131165322;
-			
-			// aapt resource value: 0x7f07007e
-			public const int txtWriter = 2131165310;
+			public const int txtActorsHeading = 2131165306;
 			
 			// aapt resource value: 0x7f07007d
-			public const int txtWriterHeading = 2131165309;
+			public const int txtCountry = 2131165309;
 			
-			// aapt resource value: 0x7f070076
-			public const int txtYear = 2131165302;
+			// aapt resource value: 0x7f07007c
+			public const int txtCountryHeading = 2131165308;
+			
+			// aapt resource value: 0x7f070079
+			public const int txtDirector = 2131165305;
+			
+			// aapt resource value: 0x7f070078
+			public const int txtDirectorHeading = 2131165304;
+			
+			// aapt resource value: 0x7f070071
+			public const int txtGenre = 2131165297;
+			
+			// aapt resource value: 0x7f070070
+			public const int txtGenreHeading = 2131165296;
+			
+			// aapt resource value: 0x7f070073
+			public const int txtIMDBRating = 2131165299;
+			
+			// aapt resource value: 0x7f070072
+			public const int txtIMDBRatingHeading = 2131165298;
 			
 			// aapt resource value: 0x7f070075
-			public const int txtYearHeading = 2131165301;
+			public const int txtIMDBVotes = 2131165301;
 			
-			// aapt resource value: 0x7f070088
-			public const int txtmovietitle = 2131165320;
+			// aapt resource value: 0x7f070074
+			public const int txtIMDBVotesHeading = 2131165300;
 			
-			// aapt resource value: 0x7f070089
-			public const int txtyear = 2131165321;
+			// aapt resource value: 0x7f07007f
+			public const int txtLanguage = 2131165311;
+			
+			// aapt resource value: 0x7f07007e
+			public const int txtLanguageHeading = 2131165310;
+			
+			// aapt resource value: 0x7f07006d
+			public const int txtMovieTitle = 2131165293;
+			
+			// aapt resource value: 0x7f07006c
+			public const int txtMovieTitleHeading = 2131165292;
+			
+			// aapt resource value: 0x7f070077
+			public const int txtWriter = 2131165303;
+			
+			// aapt resource value: 0x7f070076
+			public const int txtWriterHeading = 2131165302;
+			
+			// aapt resource value: 0x7f07006f
+			public const int txtYear = 2131165295;
+			
+			// aapt resource value: 0x7f07006e
+			public const int txtYearHeading = 2131165294;
+			
+			// aapt resource value: 0x7f070080
+			public const int txt_search = 2131165312;
+			
+			// aapt resource value: 0x7f07008b
+			public const int txtmovietitle = 2131165323;
+			
+			// aapt resource value: 0x7f07008c
+			public const int txtyear = 2131165324;
 			
 			// aapt resource value: 0x7f070009
 			public const int up = 2131165193;
@@ -2365,46 +2362,46 @@ namespace omdb
 			public const int abc_select_dialog_material = 2130968600;
 			
 			// aapt resource value: 0x7f040019
-			public const int design_layout_snackbar = 2130968601;
+			public const int activity_details = 2130968601;
 			
 			// aapt resource value: 0x7f04001a
-			public const int design_layout_snackbar_include = 2130968602;
+			public const int activity_main = 2130968602;
 			
 			// aapt resource value: 0x7f04001b
-			public const int design_layout_tab_icon = 2130968603;
+			public const int design_layout_snackbar = 2130968603;
 			
 			// aapt resource value: 0x7f04001c
-			public const int design_layout_tab_text = 2130968604;
+			public const int design_layout_snackbar_include = 2130968604;
 			
 			// aapt resource value: 0x7f04001d
-			public const int design_menu_item_action_area = 2130968605;
+			public const int design_layout_tab_icon = 2130968605;
 			
 			// aapt resource value: 0x7f04001e
-			public const int design_navigation_item = 2130968606;
+			public const int design_layout_tab_text = 2130968606;
 			
 			// aapt resource value: 0x7f04001f
-			public const int design_navigation_item_header = 2130968607;
+			public const int design_menu_item_action_area = 2130968607;
 			
 			// aapt resource value: 0x7f040020
-			public const int design_navigation_item_separator = 2130968608;
+			public const int design_navigation_item = 2130968608;
 			
 			// aapt resource value: 0x7f040021
-			public const int design_navigation_item_subheader = 2130968609;
+			public const int design_navigation_item_header = 2130968609;
 			
 			// aapt resource value: 0x7f040022
-			public const int design_navigation_menu = 2130968610;
+			public const int design_navigation_item_separator = 2130968610;
 			
 			// aapt resource value: 0x7f040023
-			public const int design_navigation_menu_item = 2130968611;
+			public const int design_navigation_item_subheader = 2130968611;
 			
 			// aapt resource value: 0x7f040024
-			public const int Details = 2130968612;
+			public const int design_navigation_menu = 2130968612;
 			
 			// aapt resource value: 0x7f040025
-			public const int ListViewDetails = 2130968613;
+			public const int design_navigation_menu_item = 2130968613;
 			
 			// aapt resource value: 0x7f040026
-			public const int Main = 2130968614;
+			public const int list_view_details = 2130968614;
 			
 			// aapt resource value: 0x7f040027
 			public const int notification_media_action = 2130968615;

@@ -1,11 +1,11 @@
-MoviesDirectory.Activities.DetailActivity, omdb;md5f1a8ffea65414195317053e1beea1431.DetailActivity
-MoviesDirectory.Activities.DetailActivity, omdb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f1a8ffea65414195317053e1beea1431.DetailActivity
-MoviesDirectory.Activities.DetailActivity;md5f1a8ffea65414195317053e1beea1431.DetailActivity
-moviesdirectory.activities.DetailActivity;md5f1a8ffea65414195317053e1beea1431.DetailActivity
-MoviesDirectory.Activities.MainActivity, omdb;md5f1a8ffea65414195317053e1beea1431.MainActivity
-MoviesDirectory.Activities.MainActivity, omdb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f1a8ffea65414195317053e1beea1431.MainActivity
-MoviesDirectory.Activities.MainActivity;md5f1a8ffea65414195317053e1beea1431.MainActivity
-moviesdirectory.activities.MainActivity;md5f1a8ffea65414195317053e1beea1431.MainActivity
+MoviesDirectory.Movies.Views.DetailActivity, omdb;md52cb4cfcd47b28a190f7c2705e2e740df.DetailActivity
+MoviesDirectory.Movies.Views.DetailActivity, omdb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md52cb4cfcd47b28a190f7c2705e2e740df.DetailActivity
+MoviesDirectory.Movies.Views.DetailActivity;md52cb4cfcd47b28a190f7c2705e2e740df.DetailActivity
+moviesdirectory.movies.views.DetailActivity;md52cb4cfcd47b28a190f7c2705e2e740df.DetailActivity
+MoviesDirectory.Movies.Views.MainActivity, omdb;md52cb4cfcd47b28a190f7c2705e2e740df.MainActivity
+MoviesDirectory.Movies.Views.MainActivity, omdb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md52cb4cfcd47b28a190f7c2705e2e740df.MainActivity
+MoviesDirectory.Movies.Views.MainActivity;md52cb4cfcd47b28a190f7c2705e2e740df.MainActivity
+moviesdirectory.movies.views.MainActivity;md52cb4cfcd47b28a190f7c2705e2e740df.MainActivity
 MoviesDirectory.Adapter.DataAdapter, omdb;md5e683b0d2f5857cc14283d4339d6ba851.DataAdapter
 MoviesDirectory.Adapter.DataAdapter, omdb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5e683b0d2f5857cc14283d4339d6ba851.DataAdapter
 MoviesDirectory.Adapter.DataAdapter;md5e683b0d2f5857cc14283d4339d6ba851.DataAdapter

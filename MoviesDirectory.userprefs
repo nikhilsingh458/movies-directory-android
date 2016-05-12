@@ -1,13 +1,28 @@
-﻿<Properties StartupItem="omdb\MoviesDirectory.csproj" RefactoringSettings.EnableRefactorings="True">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.sample" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="omdb\Activities\DetailActivity.cs">
+﻿<Properties StartupItem="omdb\MoviesDirectory.Android.csproj" RefactoringSettings.EnableRefactorings="True">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.192.168.56.102:5555" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="omdb\ToDo-MvvmCross\_ Droid UI.txt">
     <Files>
-      <File FileName="omdb\Activities\DetailActivity.cs" Line="12" Column="1" />
+      <File FileName="omdb\Movies\Views\MainActivity.cs" Line="13" Column="15" />
+      <File FileName="omdb\Movies\Views\DetailActivity.cs" Line="14" Column="25" />
+      <File FileName="MoviesDirectory\App.cs" Line="1" Column="14" />
+      <File FileName="omdb\ToDo-MvvmCross\_ Droid UI.txt" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MoviesDirectory" expanded="True">
+            <Node name="MoviesDirectory" expanded="True" selected="True" />
+            <Node name="MoviesDirectory.Android" expanded="True">
+              <Node name="ToDo-MvvmCross" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.MoviesDirectory AndroidDesignerPreferredDevice="Nexus 4" />
+  <MonoDevelop.Ide.ItemProperties.MoviesDirectory.Android AndroidDesignerPreferredDevice="Nexus 4" />
 </Properties>

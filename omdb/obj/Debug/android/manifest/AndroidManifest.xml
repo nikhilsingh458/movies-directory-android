@@ -5,8 +5,8 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:allowBackup="true" android:icon="@mipmap/icon" android:label="@string/app_name" android:name="mono.android.app.Application" android:debuggable="true">
-    <activity android:label="Movie Detail" android:name="md5f1a8ffea65414195317053e1beea1431.DetailActivity" />
-    <activity android:icon="@mipmap/icon" android:label="Movies List" android:name="md5f1a8ffea65414195317053e1beea1431.MainActivity">
+    <activity android:label="Movie Detail" android:name="md52cb4cfcd47b28a190f7c2705e2e740df.DetailActivity" />
+    <activity android:icon="@mipmap/icon" android:label="Movies List" android:name="md52cb4cfcd47b28a190f7c2705e2e740df.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

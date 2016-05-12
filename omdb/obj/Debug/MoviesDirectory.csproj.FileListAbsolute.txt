@@ -44,5 +44,17 @@ C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\res\drawable\sortas
 C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\res\drawable\sortdescending.png
 C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\R.cs.flag
 C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\uploadflags.txt
+C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\MoviesDirectory.csprojResolveAssemblyReference.cache
+C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\bin\Debug\MvvmCross.Binding.dll
+C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\bin\Debug\MvvmCross.Binding.Droid.dll
+C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\bin\Debug\MvvmCross.Core.dll
+C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\bin\Debug\MvvmCross.Droid.dll
+C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\bin\Debug\MvvmCross.Droid.Shared.dll
+C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\bin\Debug\MvvmCross.Localization.dll
+C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\bin\Debug\MvvmCross.Platform.dll
+C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\bin\Debug\MvvmCross.Platform.Droid.dll
+C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\bin\Debug\MvvmCross.Platform.dll.mdb
+C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\bin\Debug\MvvmCross.Binding.dll.mdb
+C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\bin\Debug\MvvmCross.Localization.dll.mdb
 C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\obj\Debug\omdb.dll.mdb
 C:\Users\Nikhil.Singh\Documents\Projects\omdb\omdb\bin\Debug\omdb.dll.mdb
